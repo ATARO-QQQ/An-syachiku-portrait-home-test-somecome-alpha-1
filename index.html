@@ -105,6 +105,7 @@
                 position: absolute;
                 top: 80px;
                 left: 0;
+                box-sizing: border-box;
             }
 
             header nav.active {
@@ -135,6 +136,16 @@
             .menu-toggle span {
                 font-size: 30px;
                 line-height: 40px;
+            }
+
+            /* メニューが開いたとき、画面中央に表示されるように修正 */
+            header nav.active {
+                left: 0;
+                right: 0;
+                top: 80px;
+                bottom: 0;
+                width: 100%;
+                margin: 0 auto;  /* 中央に配置 */
             }
         }
 
