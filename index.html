@@ -22,7 +22,7 @@
             width: 100%;
             z-index: 1000;
             padding: 0;
-            height: 80px; /* ヘッダーの高さを調整 */
+            height: 80px; /* ヘッダーの高さ */
             box-sizing: border-box;
         }
 
@@ -36,17 +36,22 @@
             position: relative;
         }
 
+        /* ヘッダーのタイトル画像 */
         header img {
             height: 60px;
             width: auto;
             object-fit: contain;
             position: absolute;
             left: 0;
+            top: 50%; /* 縦方向中央 */
+            transform: translateY(-50%); /* 縦方向中央 */
         }
 
         header nav {
             display: flex;
             flex-wrap: nowrap;
+            justify-content: flex-end;
+            width: 100%;
         }
 
         header nav a {
@@ -65,11 +70,11 @@
         .menu-toggle {
             display: none;
             position: absolute;
-            top: 10px; /* 位置調整 */
+            top: 10px; /* ヘッダー内で位置調整 */
             right: 10px;
             background-color: #83ccd2;
             color: #180614;
-            padding: 10px;
+            padding: 0;
             border: none;
             cursor: pointer;
             font-size: 30px;
@@ -78,6 +83,12 @@
             text-align: center;
             border-radius: 5px;
             z-index: 1100;
+            box-sizing: border-box;
+        }
+
+        /* メニュートグルの中のマーク */
+        .menu-toggle span {
+            line-height: 40px;
         }
 
         @media (max-width: 768px) {
@@ -111,6 +122,18 @@
                 width: 100%;
                 text-align: center;
             }
+
+            /* メニュートグルの修正 */
+            .menu-toggle {
+                width: 40px;
+                height: 40px;
+                padding: 0;
+            }
+            
+            .menu-toggle span {
+                font-size: 30px;
+                line-height: 40px;
+            }
         }
 
         /* クルーセル */
@@ -133,13 +156,12 @@
         .carousel-images img {
             width: 100%;
             height: auto;
-            object-fit: cover; /* 画像が間延びしないように調整 */
+            object-fit: cover;
         }
 
-        /* スマートフォンやフィーチャーフォンの場合にクルーセルを縦3:横4に変更 */
         @media (max-width: 480px) {
             .carousel-images img {
-                aspect-ratio: 4 / 3; /* スマホやフィーチャーフォンで縦3:横4に調整 */
+                aspect-ratio: 4 / 3; /* 縦3:横4に調整 */
             }
         }
 
@@ -196,10 +218,9 @@
             margin: 0 15px;
         }
 
-        /* スマートフォン調整 */
         @media (max-width: 480px) {
             .carousel-images img {
-                aspect-ratio: 4 / 3; /* 縦3:横4に変更 */
+                aspect-ratio: 4 / 3;
             }
 
             .main-content {
@@ -248,7 +269,7 @@
 <header>
     <div class="container">
         <img src="https://via.placeholder.com/600x200?text=ナマイキデザイン" alt="ナマイキデザイン">
-        <button class="menu-toggle">☰</button>
+        <button class="menu-toggle"><span>☰</span></button>
         <nav>
             <a href="#">ホーム</a>
             <a href="#">サービス</a>
