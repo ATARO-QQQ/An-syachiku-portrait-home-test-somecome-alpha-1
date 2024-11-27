@@ -69,8 +69,9 @@
         .menu-toggle {
             display: none;
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 50%;
+            right: 10px; /* 右に寄せる */
+            transform: translateY(-50%); /* 縦中央揃え */
             background-color: #83ccd2;
             color: #180614;
             padding: 0;
@@ -126,6 +127,9 @@
                 width: 40px;
                 height: 40px;
                 padding: 0;
+                top: 50%;
+                right: 10px; /* 右寄せ */
+                transform: translateY(-50%); /* 縦中央揃え */
             }
             
             .menu-toggle span {
@@ -279,10 +283,10 @@
 
 <div class="carousel">
     <div class="carousel-images">
-        <a href="#"><img src="スライド1.png" alt="スライド1"></a>
-        <a href="#"><img src="スライド2.png" alt="スライド2"></a>
-        <a href="#"><img src="スライド1.png" alt="スライド3"></a>
-        <a href="#"><img src="スライド3.png" alt="スライド4"></a>
+        <a href="#"><img src="スライド1.PNG" alt="スライド1"></a>
+        <a href="#"><img src="スライド2.PNG" alt="スライド2"></a>
+        <a href="#"><img src="スライド1.PNG" alt="スライド3"></a>
+        <a href="#"><img src="スライド3.PNG" alt="スライド4"></a>
     </div>
     <button class="prev">←</button>
     <button class="next">→</button>
