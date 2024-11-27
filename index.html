@@ -22,18 +22,21 @@
             width: 100%;
             z-index: 1000;
             padding: 0;
-            height: 80px; /* ヘッダーの高さ */
             box-sizing: border-box;
+            height: 80px; /* ヘッダーの高さ */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
+            width: 100%;
             max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
+            padding: 0 15px;
+            box-sizing: border-box;
         }
 
         /* ヘッダーのタイトル画像 */
@@ -41,15 +44,11 @@
             height: 60px;
             width: auto;
             object-fit: contain;
-            position: absolute;
-            left: 0;
-            top: 50%; /* 縦方向中央 */
-            transform: translateY(-50%); /* 縦方向中央 */
+            position: relative;
         }
 
         header nav {
             display: flex;
-            flex-wrap: nowrap;
             justify-content: flex-end;
             width: 100%;
         }
@@ -70,7 +69,7 @@
         .menu-toggle {
             display: none;
             position: absolute;
-            top: 10px; /* ヘッダー内で位置調整 */
+            top: 10px;
             right: 10px;
             background-color: #83ccd2;
             color: #180614;
@@ -93,7 +92,6 @@
 
         @media (max-width: 768px) {
             header .container {
-                flex-wrap: nowrap;
                 justify-content: space-between;
                 align-items: center;
             }
@@ -281,10 +279,10 @@
 
 <div class="carousel">
     <div class="carousel-images">
-        <a href="#"><img src="スライド1" alt="スライド1"></a>
-        <a href="#"><img src="スライド2" alt="スライド2"></a>
-        <a href="#"><img src="スライド1" alt="スライド3"></a>
-        <a href="#"><img src="スライド3" alt="スライド4"></a>
+        <a href="#"><img src="スライド1.png" alt="スライド1"></a>
+        <a href="#"><img src="スライド2.png" alt="スライド2"></a>
+        <a href="#"><img src="スライド1.png" alt="スライド3"></a>
+        <a href="#"><img src="スライド3.png" alt="スライド4"></a>
     </div>
     <button class="prev">←</button>
     <button class="next">→</button>
