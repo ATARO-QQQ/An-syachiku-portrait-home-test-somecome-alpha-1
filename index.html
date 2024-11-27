@@ -32,12 +32,15 @@
             padding: 10px;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
         }
 
         header img {
             height: 60px;
-            max-width: 100%; /* 画像のサイズを調整 */
+            width: auto;
             object-fit: contain;
+            position: absolute;
+            left: 0;
         }
 
         header nav {
@@ -84,6 +87,9 @@
                 flex-direction: column;
                 width: 100%;
                 background-color: #180614;
+                position: absolute;
+                top: 80px;
+                left: 0;
             }
 
             header nav.active {
@@ -125,9 +131,10 @@
             object-fit: cover; /* 画像が間延びしないように調整 */
         }
 
+        /* スマートフォンやフィーチャーフォンの場合にクルーセルを縦3:横4に変更 */
         @media (max-width: 480px) {
             .carousel-images img {
-                aspect-ratio: 1 / 1; /* スマホやフィーチャーフォンで正方形に近い形 */
+                aspect-ratio: 4 / 3; /* スマホやフィーチャーフォンで縦3:横4に調整 */
             }
         }
 
@@ -187,7 +194,7 @@
         /* スマートフォン調整 */
         @media (max-width: 480px) {
             .carousel-images img {
-                aspect-ratio: 1 / 1; /* 正方形に近い形にする */
+                aspect-ratio: 4 / 3; /* 縦3:横4に変更 */
             }
 
             .main-content {
@@ -236,7 +243,7 @@
 <header>
     <div class="container">
         <img src="ナマイキデザイン ロゴ 2024 11 26 01 - コピー.png" alt="ナマイキデザイン">
-        <button class="menu-toggle">Ｍ</button>
+        <button class="menu-toggle">☰</button>
         <nav>
             <a href="#">ホーム</a>
             <a href="#">サービス</a>
@@ -261,15 +268,13 @@
     <div class="main-content">
         <h1>ナマイキデザインへようこそ</h1>
         <p>ナマイキデザインは、動画や画像など、様々な撮影の手助けをする団体です。</p>
-        <p>私たちは、プロフェッショナルな機材と経験豊かなスタッフを揃え、撮影から編集までの全ての工程をサポートします。</p>
+        <p>私たちはクリエイティブなアイデアを形にするため、日々努力しています。ぜひ、私たちのサービスをご覧ください。</p>
     </div>
 </main>
 
 <footer>
-    <div>
-        <p>閲覧回数: <span id="page-views">0</span></p>
-        <p>現在時刻: <span id="current-time">--:--:--</span></p>
-    </div>
+    <p>閲覧回数: <span id="page-views">0</span></p>
+    <p>現在時刻: <span id="current-time">--:--:--</span></p>
     <div class="footer-menu">
         <a href="#">サービス</a>
         <a href="#">ギャラリー</a>
